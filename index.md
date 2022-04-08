@@ -8,26 +8,24 @@
 
 [Markdown Reference](https://commonmark.org/help/)
 
-![Image](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
-> "Be like water" - Bruce Lee
+
+> "You miss 100% of the shots you don't take" - Michael Scott
 
 * University
 * Of
-* California
+
 
 1. Apples
 2. Bananas
 3. Pears
+4. Oranges
+5. Peaches
 
-Line underneath:
+**How to print out "Hello World" In Java:**
 
 ___
 
 `System.out.println("Hello World")`
 
-```
-Public String firstMethod(){
-    return System.out.println("Hello World");
-}
-```
+
