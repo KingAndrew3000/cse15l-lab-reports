@@ -15,3 +15,16 @@ Here I will be giving a simple tutorial on how to log into your course specific 
 * Once you are finished and you open the program you will see a screen similar to this.
 
 ![Image](labreport1_1.png)
+
+## Remotely Connecting
+***
+
+* Our next step is we will want to download a program called [Open SSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) onto our computers
+
+> If you have Windows 10 (or above) already installed on your device then check in your settings and you should already have this program downloaded
+
+* Once you are done downloading that program then you want to look up your course-specific account username [here](https://sdacs.ucsd.edu/~icc/index.php) that you will use to log into the ssh servers
+
+It should be under __Additional Acounts__ header and look something like this, with the `zz` at the end replaced with your account specific username
+
+`cse15lsp22zz`
