@@ -52,3 +52,7 @@ Are you sure you want to continue connecting
 
 If you do then great! You are on the right path, but if not do not worry just refer back to the past steps for any clarification.
 
+## Running Some Commands
+___
+Great! Now that we are connected to the server, lets try running some commands and see what we get.
+
