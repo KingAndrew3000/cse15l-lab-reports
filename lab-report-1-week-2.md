@@ -28,3 +28,27 @@ Here I will be giving a simple tutorial on how to log into your course specific 
 It should be under __Additional Acounts__ header and look something like this, with the `zz` at the end replaced with your account specific username
 
 `cse15lsp22zz`
+
+* Hold onto this, and now open up the VS Code application and open up a new Terminal (click __Terminal__ up above and then __New Terminal__). Then you want to input the follow command into the command line below, making sure to replace the `zz` 
+
+`$ ssh cse15lsp22zz@ieng6.ucsd.edu`
+
+> If this is your first time logging into this server, then you will probably get a message similiar to whats shown down below. If then is the case then just say "yes" and continue on.
+
+```
+⤇ ssh cs15lsp22zz@ieng6.ucsd.edu
+
+The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
+
+RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
+
+Are you sure you want to continue connecting
+(yes/no/[fingerprint])?
+```
+
+* Once you select "yes" then you will be prompted to enter your course-specific password. After completeing this step then you should recieve a screen similiar to what's shown below. 
+
+![image](labreport1_2.png)
+
+If you do then great! You are on the right path, but if not do not worry just refer back to the past steps for any clarification.
+
