@@ -97,7 +97,7 @@ After completing these steps your screen should look similar to this:
 
 ![image](labreport1_5.png)
 
-# Setting an SSH Key
+## Setting an SSH Key
 ___
 In order to having to bypass having to constantly retype our passwords when logging into our remote computer, we can create an ssh key. Lets do that now.
 
@@ -115,10 +115,22 @@ Now that we have created both our public and private keys, stored on our compute
 
 `$ scp /Users/<Username>/.ssh/id_rsa.pub cse15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys`
 
-> Make sure to replace <Username> with your computers username
+> Make sure to replace `Username` with your computers username
 
 Once we complete this step we should now be able to log into our user account on the remote computer without having to type our password. Try it out now, and it should look something like this.
 
 ![image](labreport1_7.png)
 
 After I copied the public key to the .ssh directory of our account, I was able to log in without having to type out my password.
+
+## Optimizing Remote Running
+___
+At this point in the tutorial we should be able to log in and out of remote computer quickly and know how to move files, but know we will discuss more ways we could make these processes more quick and efficient
+
+* Instead of having to log into the remote server and then running a command, we could combine these two steps into one. We achieve these by writing a command in quotes like "this" at the end of as `ssh` command, to run it right away on the remote server. Doing so will also exit the server right after as well.
+
+* Another useful tool is that we can run multiple commands on one line but using semicolons at the end of commands, like this example below:
+
+![image](labreport1_8.png)
+
+With that last step that completes our tutorial, thank you!
