@@ -56,3 +56,44 @@ If you do then great! You are on the right path, but if not do not worry just re
 ___
 Great! Now that we are connected to the server, lets try running some commands and see what we get.
 
+[Here](https://www.codecademy.com/article/command-line-commands) is a website with some useful commands we could try and their descriptions.
+
+Some examples are:
+* `$ cd <Directory>/` which changes to that arguments directory
+* `$ ls` which list out all of the files in the current directory
+
+And here is an example of what you should expect to see in your command terminal. Here I input into my command terminal `$ ls -a` which lists all the files in my current directory including the hidden files.
+
+![image](labreport1_3.png)
+
+You should also try some of these commands on your computer as well, not just on the remote computer. To log out of the server try `ctrl + D` and try some commands. To log back in just refer back to the previous steps on how to log in :)
+
+
+## Moving Files with scp
+___
+Okay so now that we have some practice using commands and logging in and out of the ssh server, lets try to move some files back and forth between computers.
+
+* Create a file called `labReport1` on your computer and put the following code into it:
+```
+class labReport1 {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        System.out.println(System.getProperty("os.name"));
+    }
+}
+```
+
+* If we run this file on our computer we should see a screen similiar to this, keeping in mind that the line `System.out.println(System.getProperty("os.name"));` will print out the operating system of the computer we run this line on. Keep this in mind as we continue on.
+
+![image](labreport1_4.png)
+
+* Now in order to move this file from our _client_ computer to our _remote_ computer, we want to use the `scp` command. We want to run this command into our terminal, making sure to use our username. It should ask you to type in your password and then press enter.
+
+`$ scp labReport1.java cse15lsp22zz@ieng6.ucsd.edu`
+
+* Once you complete this step then log back into the _remote_ computer with `ssh` and check if your file is there (`$ ls`). Once you see it, then try running the command like you would on your own computer. 
+
+After completing these steps your screen should look similar to this:
+
+![image](labreport1_5.png)
+
