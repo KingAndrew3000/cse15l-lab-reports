@@ -97,3 +97,28 @@ After completing these steps your screen should look similar to this:
 
 ![image](labreport1_5.png)
 
+# Setting an SSH Key
+___
+In order to having to bypass having to constantly retype our passwords when logging into our remote computer, we can create an ssh key. Lets do that now.
+
+* So first we want to generate our keys and save them into a file on our computer. We can do this by entering `$ ssh-keygen` onto our computers terminal. It will then ask us to enter a file to say our key, in which we could just press enter. Then it will ask us to enter a passphrase and we have to make to to __KEEP IT EMPTY AND JUST PRESS ENTER__, in which it will ask us again we want to just press enter. 
+
+Our screens should look similiar to this by the end of the last step: 
+
+![image](labreport1_6.png)
+
+Now that we have created both our public and private keys, stored on our computer, we now want to copy the public key to the .ssh directory of our user account.
+
+* Log into the remote computer using ssh,and once you enter your password and log in, enter the command `$ mkdir .ssh` and then log out. You shouldn't see anything new pop up on your terminal screen.
+
+* Now log out of the remote computer (`ctrl + D`), and on your own computer type in the following command into the command terminal:
+
+`$ scp /Users/<Username>/.ssh/id_rsa.pub cse15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys`
+
+> Make sure to replace <Username> with your computers username
+
+Once we complete this step we should now be able to log into our user account on the remote computer without having to type our password. Try it out now, and it should look something like this.
+
+![image](labreport1_7.png)
+
+After I copied the public key to the .ssh directory of our account, I was able to log in without having to type out my password.
