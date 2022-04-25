@@ -65,3 +65,28 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 
 ## Third Code Change
 ___
+<br/>
+
+![image](labreport2_3.png)
+
+Here is the link to the [failure inducing input](https://github.com/LinearParadox/markdown-parser/commit/6ffbcdace8d795b3715c463883f7716547bd52d6) that prompted this code change
+
+<br/>
+
+Here is the output of this failure-inducint input:
+
+```
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3512)
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:237)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:244)
+        at java.base/java.util.ArrayList.add(ArrayList.java:454)
+        at java.base/java.util.ArrayList.add(ArrayList.java:467)
+        at MarkdownParse.getLinks(MarkdownParse.java:41)
+        at MarkdownParse.main(MarkdownParse.java:52)
+```
+
+<br/>
+
+>So for this failure-inducing input we get a runtime error as our symptom. The reason for this is because of an infinite loop, which we have because of the text after the link that isn't a link itself, the while loop inside of our code will never stop. Therefore this is the bug inside of our original code and hence why we made this changes to fix this bug and stop the infinite loop.
